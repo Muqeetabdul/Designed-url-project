@@ -13,8 +13,8 @@ const NavBar = () => {
                     <Navbar.Brand href="/inputshort.js">Shorty</Navbar.Brand>
                         <Nav className="me-auto">
                             <Nav.Link href='/inputshort.js'>Home</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
+                            <Nav.Link href="#link">About</Nav.Link>
+                            <Nav.Link href="#link">Contour</Nav.Link>
                             <Nav.Link href='/history.js'>History</Nav.Link>
                         </Nav>
                 </Container>

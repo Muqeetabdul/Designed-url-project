@@ -36,22 +36,36 @@
   text-indent: 1rem;
   font-size: 1rem;
   border: 1px solid black;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
 }
 
 .inputcontainer button{
   height: 3rem;
-  /* width: 8rem; */
+  width: 8rem;
   font-family: cursive;
   font-weight: bold;
   border: none;
   text-transform: uppercase;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   color: white;
   background-color: brown;
   cursor: pointer;
+  display: block;
+}
+
+.inputdate{
+  width: 125px !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-indent: none;
+}
+
+.dateinput{
+  width: 150px;
+  height: 150px;
+  text-indent: none;
+  padding: 0px;
+  
 }
 
 
