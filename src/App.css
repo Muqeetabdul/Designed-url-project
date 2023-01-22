@@ -4,7 +4,7 @@
   height: 800px;
 }
 
-/* This is Container for URL input */
+/* This is Container for URL input from users */
 .inputcontainer{
   width: 100%;
   margin-top: 125px;
@@ -14,7 +14,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .inputcontainer h1{
   font-family: cursive;
@@ -59,7 +58,7 @@
   color: gray;
   text-indent: 0.5rem !important;
 }
-
+/* **** User Input section ends  */
 
 /* *** Short URL display section *** */
 .showurl{
@@ -76,7 +75,6 @@
 
 .showurl button{
   cursor: pointer;
-  padding: 0.5rem 1rem;
   background-color: white;
   border: 1px solid black;
   color: brown;
@@ -84,14 +82,8 @@
   /* font-size: 15px; */
   font-weight: bold;
   font-family: cursive;
-  text-transform: uppercase;
   margin-top: 10px;
 }
-
-.showurl button.copied{
-  color: grey ;
-}
-
 
 /* Navbar section */
 .navstyle{
@@ -111,7 +103,6 @@
   color: brown;
   font-size: 35px;
 }
-
 
 .tabledata{
   width: 60% !important;
