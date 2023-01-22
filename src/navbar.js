@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
@@ -10,12 +11,12 @@ const NavBar = () => {
         <div>
             <Navbar bg="light" expand="lg"  >
                 <Container style={{ height: 70, marginLeft : 0}} className="navstyle">
-                    <Navbar.Brand href="/inputshort.js">Shorty</Navbar.Brand>
+                    <Link to="/Homepage"><span>Shorty</span></Link>
                         <Nav className="me-auto">
-                            <Nav.Link href='/inputshort.js'>Home</Nav.Link>
-                            <Nav.Link href="#link">About</Nav.Link>
-                            <Nav.Link href="#link">Contour</Nav.Link>
-                            <Nav.Link href='/history.js'>History</Nav.Link>
+                            <Link to='/Homepage'>Home</Link>
+                            <Link href="#link">About</Link>
+                            <Link href="#link">Contour</Link>
+                            <Link to='/History'>History</Link>
                         </Nav>
                 </Container>
             </Navbar>

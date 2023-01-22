@@ -1,18 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import Inputshort from './inputshort';
-import Shorturl from './shorturl';
 import { useState } from 'react';
 import NavBar from './navbar';
-import History from './history';
+import History from './History';
+import Homepage from './Homepage';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [inputUrl , setinputUrl] = useState("");
+  
   return (
     <div className="appcontainer">
       <NavBar />
-      <Inputshort setinputUrl={setinputUrl} />
-      <Shorturl inputUrl={inputUrl} />
+
+      <Routes>
+        <Route exact="true" path="/" element={<Homepage />}  />
+        <Route exact="true" path="/Homepage" element={<Homepage />}  />
+        <Route path="/History" element={<History />}  />
+      </Routes>
+      
     </div>
   );
 }
