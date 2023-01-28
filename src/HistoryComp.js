@@ -5,6 +5,7 @@ import { Table, Button, Modal, Form } from "react-bootstrap";
 import "./App.css";
 import { MdDelete, MdOutlineFileCopy } from "react-icons/md";
 import { AiOutlineEdit } from "react-icons/ai";
+import moment from "moment/moment";
 
 const HistoryComp = () => {
   const [localData, setLocalData] = useState([]);
@@ -46,6 +47,29 @@ const HistoryComp = () => {
   }
   
   const handleUpdateSubmit = () => {
+
+  }
+
+  const handleDate = (item) => {
+    const Date_Format = "DD MMM, yyyy";
+    const currentdate = moment().format(Date_Format);
+    const expirydate = moment(item.date).format(Date_Format);
+
+    var datecheck = moment.utc(expirydate , Date_Format);
+
+    var expiryIsAfter = datecheck.isAfter(currentdate);
+
+
+    if(expiryIsAfter){
+      console.log("not expire")
+      window.open(item.Url, '_blank')
+
+    }else{
+      console.log("expired")
+    }
+
+    // expiryIsAfter ? (console.log(true)) : (console.log(false))
+
 
   }
 
@@ -120,16 +144,16 @@ const HistoryComp = () => {
             <tr key={item?.id}>
               <td>{i + 1}</td>
               <td>{item?.Url}</td>
-              <td>
-                <a href={item?.Url} target={"_blank"}>
+              <td onClick={()=> handleDate(item)}>{item?.newshortUrl}
+                {/* <a href={item?.Url} target={"_blank"}>
                   {item?.newshortUrl}
-                </a>
+                </a> */}
               </td>
               <td>{item?.date}</td>
               <td>
                 {
                   <CopyToClipboard
-                    text={item?.shortUrl}
+                    text={item?.newshortUrl}
                     onCopy={() => setcopied(true)}
                   >
                     <button>

@@ -23,6 +23,9 @@ const Homepage = () => {
 
     if (!Url.match(regExp)) {
       setShow(true);
+      setTimeout(() => {
+        setShow(false);
+      }, 1500);
     }
     else{
     
@@ -55,14 +58,14 @@ const Homepage = () => {
 
   return (
     <div className="inputcontainer">
-    
+      {
+        show && (
+          <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+          <Alert.Heading style={{width: 550}} >Oh snap! Invalid URL!</Alert.Heading>
+        </Alert>
+        )
+      }
       
-      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-        <p>
-          You have entered an invalid URL
-        </p>
-      </Alert>
 
       <h1>
         URL-<span>Shortner</span>
